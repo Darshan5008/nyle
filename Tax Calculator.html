@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://127.0.0.1:5500/istudio.html/1.html/1.hmtl/assignment/assign.html -->
+<html lang="en" class="hydrated"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <style>
+        .background{
+            height: 400px;
+            width: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:1px solid black;
+        }
+       .box{
+        width: 350px;
+        height: 150px;
+        margin: 1px;
+        padding: 25px;
+        border:1px solid black;
+    }
+       
+        body {
+            font-family: Verdana, sans-serif;
+            border-style: square;
+            margin: -50px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-weight: 1000; 
+        }
+
+        .container {
+            
+            padding: 10px;
+            border-radius: 10px;
+            width: 500px;
+
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #774caf;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn{
+            padding: 10px 60px;
+            background: #fff;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            border-radius: 30px;
+
+        }
+      
+
+        #result { 
+             margin-top: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <label for="grossIncome">Enter gross annual income  <ion-icon name="help-circle-outline" role="img" class="md hydrated"><template shadowrootmode="open"><div class="icon-inner"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></path><path d="M200 202.29s.84-17.5 19.57-32.57C230.68 160.77 244 158.18 256 158c10.93-.14 20.69 1.67 26.53 4.45 10 4.76 29.47 16.38 29.47 41.09 0 26-17 37.81-36.37 50.8S251 281.43 251 296" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28" class="ionicon-fill-none"></path><circle cx="250" cy="348" r="20"></circle></svg></div></template></ion-icon></label>
+            <input type="number" id="grossIncome" placeholder="Enter gross annual income" required="" fdprocessedid="jmwxd7"><br>
+            <label for="extraIncome">Enter extra income  <ion-icon name="help-circle-outline" role="img" class="md hydrated"><template shadowrootmode="open"><div class="icon-inner"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></path><path d="M200 202.29s.84-17.5 19.57-32.57C230.68 160.77 244 158.18 256 158c10.93-.14 20.69 1.67 26.53 4.45 10 4.76 29.47 16.38 29.47 41.09 0 26-17 37.81-36.37 50.8S251 281.43 251 296" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28" class="ionicon-fill-none"></path><circle cx="250" cy="348" r="20"></circle></svg></div></template></ion-icon></label>
+            <input type="number" id="extraIncome" placeholder="Enter extra income from other sources" fdprocessedid="7pd0ug"><br>
+            <label for="age"> Enter age group  <ion-icon name="help-circle-outline" role="img" class="md hydrated"><template shadowrootmode="open"><div class="icon-inner"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></path><path d="M200 202.29s.84-17.5 19.57-32.57C230.68 160.77 244 158.18 256 158c10.93-.14 20.69 1.67 26.53 4.45 10 4.76 29.47 16.38 29.47 41.09 0 26-17 37.81-36.37 50.8S251 281.43 251 296" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28" class="ionicon-fill-none"></path><circle cx="250" cy="348" r="20"></circle></svg></div></template></ion-icon></label>
+            <input type="number" id="age" required="" fdprocessedid="h7jrrm"><br>
+            <label for="deductions">Enter total applicable deductions  <ion-icon name="help-circle-outline" role="img" class="md hydrated"><template shadowrootmode="open"><div class="icon-inner"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512"><path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></path><path d="M200 202.29s.84-17.5 19.57-32.57C230.68 160.77 244 158.18 256 158c10.93-.14 20.69 1.67 26.53 4.45 10 4.76 29.47 16.38 29.47 41.09 0 26-17 37.81-36.37 50.8S251 281.43 251 296" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28" class="ionicon-fill-none"></path><circle cx="250" cy="348" r="20"></circle></svg></div></template></ion-icon></label>
+            <input type="number" id="deductions" placeholder="Add total applicable deductions" fdprocessedid="45968e"><br>
+             <input type="submit" value="Submit" id="" fdprocessedid="120pns">
+        </div>
+        </div>
+   
+
+    
+
+    <script>
+        function calculateTax() {
+            var grossIncome = parseFloat(document.getElementById("grossIncome").value);
+            var extraIncome = parseFloat(document.getElementById("extraIncome").value);
+            var deductions = parseFloat(document.getElementById("deductions").value);
+            var age = parseFloat(document.getElementById("age").value);
+            
+            var totalIncome = grossIncome + extraIncome - deductions;
+            var tax = 0;
+
+            if (totalIncome <= 800000) {
+                tax = 0;
+            } else {
+                var taxableIncome = totalIncome - 800000;
+
+                if (age < 40) {
+                    tax = taxableIncome * 0.3;
+                } else if (age >= 40 && age < 60) {
+                    tax = taxableIncome * 0.4;
+                } else {
+                    tax = taxableIncome * 0.1;
+                }
+            }
+
+            document.getElementById("result").innerHTML = "Your overall income will be" + tax.toFixed(2);
+        }
+    </script>
+    <script type="module" src="./Tax Calculator_files/ionicons.esm.js.download"></script>
+    <script nomodule="" src="./Tax Calculator_files/ionicons.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
